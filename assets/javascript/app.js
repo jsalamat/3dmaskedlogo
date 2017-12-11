@@ -20,4 +20,9 @@ function init() {
             camera.position.z = 200;
 
             scene1 = new THREE.Scene();
-            }
+
+            torus1 = new THREE.Mesh(new THREE.TorusGeometry(120, 4, 16, 100));
+            scene1.add(torus1);
+            startTween(torus1, 1200);
+            torus2 = new THREE.Mesh(new THREE.TorusGeometry(130, 1, 16, 100));
+        }

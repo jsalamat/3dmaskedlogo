@@ -25,4 +25,10 @@ function init() {
             scene1.add(torus1);
             startTween(torus1, 1200);
             torus2 = new THREE.Mesh(new THREE.TorusGeometry(130, 1, 16, 100));
+
+            scene1.add(torus2);
+            startTween(torus2, 1800);
+
+            var loader = new THREE.ColladaLoader();
+            loader.options.convertUpAxis = true;
         }

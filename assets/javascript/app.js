@@ -13,3 +13,11 @@ var clock = new THREE.Clock();
 init();
 
 document.addEventListener('mousemove', onDocumentMouseMove, false);
+
+function init() {
+
+            camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 1, 1000);
+            camera.position.z = 200;
+
+            scene1 = new THREE.Scene();
+            }

@@ -61,3 +61,18 @@ function init() {
             renderer.setSize(window.innerWidth, window.innerHeight);
             renderer.autoClear = false;
             document.body.appendChild(renderer.domElement);
+
+            var clearPass = new THREE.ClearPass();
+
+            var clearMaskPass = new THREE.ClearMaskPass();
+
+            var maskPass1 = new THREE.MaskPass(scene1, camera);
+
+            var texture1 = new THREE.TextureLoader().load('img/1.jpg');
+
+            var texturePass1 = new THREE.TexturePass(texture1);
+
+            var outputPass = new THREE.ShaderPass(THREE.CopyShader);
+            outputPass.renderToScreen = true;
+
+            

@@ -52,3 +52,12 @@ function init() {
                 animate();
 
             });
+
+            renderer = new THREE.WebGLRenderer({
+                antialias: true
+            });
+            renderer.setClearColor(0x616b75);
+            renderer.setPixelRatio(window.devicePixelRatio);
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            renderer.autoClear = false;
+            document.body.appendChild(renderer.domElement);

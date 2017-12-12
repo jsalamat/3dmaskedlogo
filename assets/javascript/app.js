@@ -40,4 +40,15 @@ function init() {
 	            dae.rotation.y = -Math.PI / 2;
 	            dae.updateMatrix();
 	            scene1.add(dae);
-        }
+
+                for (i = 0; i < 6; i++) {
+                    var cube = scene1.getObjectByName("Cube_" + i, true);
+
+                    startTween(cube, i * 200);
+                    cubes.push(cube);
+
+                }
+
+                animate();
+
+            });

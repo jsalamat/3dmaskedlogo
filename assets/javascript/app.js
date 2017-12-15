@@ -75,4 +75,9 @@ function init() {
             var outputPass = new THREE.ShaderPass(THREE.CopyShader);
             outputPass.renderToScreen = true;
 
-            
+            var parameters = {
+                minFilter: THREE.LinearFilter,
+                magFilter: THREE.LinearFilter,
+                format: THREE.RGBFormat,
+                stencilBuffer: true
+            };

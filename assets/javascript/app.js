@@ -86,4 +86,9 @@ function init() {
 
             composer = new THREE.EffectComposer(renderer, renderTarget);
 
-            
+            composer.addPass(clearPass);
+            composer.addPass(maskPass1);
+            composer.addPass(texturePass1);
+            composer.addPass(clearMaskPass);
+            composer.addPass(outputPass);
+        }

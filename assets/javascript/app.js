@@ -81,3 +81,9 @@ function init() {
                 format: THREE.RGBFormat,
                 stencilBuffer: true
             };
+
+            var renderTarget = new THREE.WebGLRenderTarget(window.innerWidth, window.innerHeight, parameters);
+
+            composer = new THREE.EffectComposer(renderer, renderTarget);
+
+            

@@ -92,3 +92,15 @@ function init() {
             composer.addPass(clearMaskPass);
             composer.addPass(outputPass);
         }
+
+        function startTween(object, hold) {
+            object.scale.x = object.scale.y = object.scale.z = 0.001;
+
+            new TWEEN.Tween(object.scale).to({
+                x: 1,
+                y: 1,
+                z: 1
+            }, 4000).easing(TWEEN.Easing.Elastic.Out).delay(hold).start();
+        }
+
+        

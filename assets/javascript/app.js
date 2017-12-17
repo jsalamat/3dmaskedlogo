@@ -103,6 +103,19 @@ function init() {
             }, 4000).easing(TWEEN.Easing.Elastic.Out).delay(hold).start();
         }
 
+        function animate() {
+
+            requestAnimationFrame(animate);
+
+            var time = performance.now() * 0.001;
+
+            camera.position.x += (mouseX - camera.position.x) * .02;
+            camera.position.y += (-mouseY - camera.position.y) * .02;
+
+            camera.lookAt(scene1.position);
+        }
+        
+
         function onDocumentMouseMove(event) {
 
             mouseX = (event.clientX - windowHalfX) * 0.4;

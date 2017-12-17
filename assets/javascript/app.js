@@ -68,7 +68,7 @@ function init() {
 
             var maskPass1 = new THREE.MaskPass(scene1, camera);
 
-            var texture1 = new THREE.TextureLoader().load('img/1.jpg');
+            var texture1 = new THREE.TextureLoader().load('assets/images/1.jpg');
 
             var texturePass1 = new THREE.TexturePass(texture1);
 
@@ -113,8 +113,14 @@ function init() {
             camera.position.y += (-mouseY - camera.position.y) * .02;
 
             camera.lookAt(scene1.position);
+
+            for (i = 0; i < 6; i++) {
+                var move = cubes[i];
+                var offset = i / 5;
+                move.position.y = (20 * Math.sin(0.6 * time - offset));
+            }
         }
-        
+
 
         function onDocumentMouseMove(event) {
 

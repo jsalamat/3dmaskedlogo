@@ -103,4 +103,9 @@ function init() {
             }, 4000).easing(TWEEN.Easing.Elastic.Out).delay(hold).start();
         }
 
-        
+        function onDocumentMouseMove(event) {
+
+            mouseX = (event.clientX - windowHalfX) * 0.4;
+            mouseY = (event.clientY - windowHalfY) * 0.4;
+
+        }

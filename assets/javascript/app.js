@@ -119,6 +119,13 @@ function init() {
                 var offset = i / 5;
                 move.position.y = (20 * Math.sin(0.6 * time - offset));
             }
+
+            torus2.rotation.x = Math.cos(time) * 0.1;
+            torus2.rotation.y = Math.sin(time / 1.1) * 0.1;
+
+            renderer.clear();
+            composer.render(time);
+            TWEEN.update();
         }
 
 
